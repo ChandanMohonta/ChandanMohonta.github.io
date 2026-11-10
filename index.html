@@ -4,30 +4,42 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Academic profile of Chandan Kumar Mohonta, civil engineer and structural engineering researcher.">
+  <meta name="theme-color" content="#f5f7f8">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Chandan Kumar Mohonta | Civil Engineering">
+  <meta property="og:description" content="Academic profile, research interests, teaching, and publications of Chandan Kumar Mohonta, Lecturer in Civil Engineering at AKMU.">
+  <meta property="og:url" content="https://chandanmohonta.github.io/">
+  <meta property="og:image" content="https://chandanmohonta.github.io/portrait.png">
   <title>Chandan Kumar Mohonta | Civil Engineering</title>
   <style>
-    :root { --ink:#17232e; --muted:#596875; --accent:#a86142; --paper:#f5f7f8; --line:#d9e0e4; --white:#fff; }
+    :root { --ink:#17232e; --muted:#596875; --accent:#a86142; --paper:#f5f7f8; --line:#d9e0e4; --white:#fff; --sans:Arial,Helvetica,sans-serif; --serif:Georgia,'Times New Roman',serif; }
     * { box-sizing:border-box; }
-    html { scroll-behavior:auto; }
-    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.65 Georgia,'Times New Roman',serif; }
+    html { scroll-behavior:smooth; scroll-padding-top:86px; }
+    body { margin:0; color:var(--ink); background:var(--paper); font:16px/1.7 var(--sans); }
     a { color:var(--accent); text-underline-offset:3px; }
     .wrap { width:min(1120px,calc(100% - 48px)); margin:auto; }
-    header { background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); }
+    header { position:sticky; top:0; z-index:10; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); backdrop-filter:blur(10px); }
     .nav { min-height:70px; display:flex; align-items:center; justify-content:space-between; gap:20px; font:13px/1.4 system-ui,sans-serif; }
-    .brand { color:var(--ink); display:flex; align-items:center; gap:11px; padding:0; border:0; background:transparent; font:14px/1.25 Georgia,'Times New Roman',serif; text-align:left; text-decoration:none; white-space:nowrap; cursor:pointer; }
+    .brand { color:var(--ink); display:flex; align-items:center; gap:11px; padding:0; border:0; background:transparent; font:14px/1.25 var(--serif); text-align:left; text-decoration:none; white-space:nowrap; cursor:pointer; }
     .monogram { display:grid; place-items:center; width:38px; height:38px; border:1px solid #8f9aa2; border-radius:9px; font-size:14px; }
-    .brand small { display:block; color:var(--muted); font-size:11px; margin-top:3px; }
-    nav { display:flex; align-items:center; justify-content:flex-end; gap:10px; } .nav-sections { display:flex; align-items:center; gap:9px; } .nav-section { position:relative; padding:8px 0; border:0; color:var(--ink); background:transparent; font:12px/1.4 Georgia,'Times New Roman',serif; white-space:nowrap; cursor:pointer; } .nav-section::after { content:""; position:absolute; left:0; right:100%; bottom:2px; height:2px; background:var(--accent); transition:right .15s ease; } .nav-section:hover::after,.nav-section:focus-visible::after,.nav-section[aria-expanded="true"]::after { right:0; }
+    .brand small { display:block; color:var(--muted); font:11px/1.4 var(--sans); margin-top:3px; }
+    nav { display:flex; align-items:center; justify-content:flex-end; gap:14px; }
+    .nav-sections { display:flex; align-items:center; gap:16px; }
+    .nav-section { position:relative; padding:8px 0; border:0; color:var(--ink); background:transparent; font:12px/1.4 var(--sans); white-space:nowrap; cursor:pointer; }
+    .nav-section::after { content:""; position:absolute; left:0; right:100%; bottom:2px; height:2px; background:var(--accent); transition:right .15s ease; }
+    .nav-section:hover::after,.nav-section:focus-visible::after,.nav-section[aria-expanded="true"]::after { right:0; }
     nav a { color:var(--ink); text-decoration:none; white-space:nowrap; }
-    nav .nav-cv { border:1px solid #9ca6ac; border-radius:7px; padding:9px 13px; }
-    .hero { position:relative; overflow:hidden; min-height:650px; padding:44px 0; display:grid; grid-template-columns:1fr minmax(300px,380px); gap:48px; align-items:center; border-bottom:1px solid var(--line); background-color:#f2f6f7; background-image:linear-gradient(rgba(74,102,119,.075) 1px,transparent 1px),linear-gradient(90deg,rgba(74,102,119,.075) 1px,transparent 1px),radial-gradient(circle at 1px 1px,rgba(83,111,128,.18) 3px,transparent 4px); background-size:100px 100px; }
+    nav .nav-cv { border:1px solid #9ca6ac; border-radius:7px; padding:9px 13px; font:12px var(--sans); }
+    .menu-toggle { display:none; }
+    .hero { position:relative; overflow:hidden; min-height:650px; padding:54px 0; display:grid; grid-template-columns:1fr minmax(300px,390px); gap:64px; align-items:center; border-bottom:1px solid var(--line); background-color:#f5f7f8; background-image:linear-gradient(rgba(74,102,119,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(74,102,119,.035) 1px,transparent 1px),radial-gradient(circle at 1px 1px,rgba(83,111,128,.085) 2px,transparent 3px); background-size:112px 112px; }
     .hero-copy { max-width:590px; }
-    .portrait-frame { position:relative; isolation:isolate; width:100%; padding:8px; border:1px solid #cfd9de; border-radius:13px; background:rgba(255,255,255,.84); box-shadow:0 18px 48px rgba(30,48,59,.12); }
-    .portrait-frame::after { content:""; position:absolute; inset:-8px -9px 8px 9px; z-index:-1; border:2px solid rgba(168,97,66,.65); border-radius:13px; }
-    .portrait { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 23%; border-radius:7px; }
+    .portrait-frame { position:relative; isolation:isolate; width:100%; padding:9px; border:1px solid #cfd9de; border-radius:12px; background:#fff; box-shadow:0 18px 48px rgba(30,48,59,.09); }
+    .portrait-frame::after { content:""; position:absolute; inset:-7px -8px 7px 8px; z-index:-1; border:1px solid rgba(168,97,66,.55); border-radius:12px; }
+    .portrait { display:block; width:100%; aspect-ratio:4/5; object-fit:cover; object-position:center 23%; border-radius:7px; background:#fff; }
     .eyebrow, .section-label { color:var(--accent); font:700 11px/1.5 system-ui,sans-serif; letter-spacing:.15em; text-transform:uppercase; }
     .eyebrow::before { content:""; display:inline-block; width:21px; height:2px; margin:0 9px 3px 0; background:var(--accent); }
-    h1 { margin:12px 0 9px; max-width:600px; font-size:clamp(50px,6vw,68px); font-weight:400; line-height:.96; letter-spacing:-.045em; }
+    h1 { margin:12px 0 9px; max-width:600px; font:400 clamp(50px,6vw,68px)/.98 var(--serif); letter-spacing:-.045em; }
+    h2,h3,.picker-heading h2 { font-family:var(--serif); font-weight:400; }
     .subtitle { color:var(--muted); font-size:18px; margin:0 0 12px; }
     .intro { max-width:590px; }
     .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:17px; font:14px system-ui,sans-serif; }
@@ -39,6 +51,20 @@
     .glance div { padding:12px 14px; border:1px solid var(--line); border-radius:6px; background:rgba(255,255,255,.68); }
     .glance dt { color:var(--muted); font:700 10px/1.4 system-ui,sans-serif; letter-spacing:.1em; text-transform:uppercase; }
     .glance dd { margin:4px 0 0; font-size:15px; }
+    .home-section { padding:38px 0 42px; border-bottom:1px solid var(--line); }
+    .home-section h2 { margin:6px 0 20px; font-size:30px; letter-spacing:-.025em; }
+    .interest-grid,.highlight-grid,.profile-grid,.section-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+    .interest-card,.highlight-card,.profile-card,.section-button { border:1px solid var(--line); border-radius:8px; background:rgba(255,255,255,.78); }
+    .interest-card { min-height:115px; padding:18px; }
+    .interest-card h3 { margin:0 0 5px; font:18px/1.35 var(--serif); }
+    .interest-card p { margin:0; color:var(--muted); font-size:13px; line-height:1.55; }
+    .highlight-card { padding:15px 17px; }
+    .highlight-card strong { display:block; font:17px/1.4 var(--serif); }
+    .highlight-card span { color:var(--muted); font-size:12px; }
+    .profile-card { min-height:75px; padding:14px 16px; color:var(--ink); text-decoration:none; transition:border-color .15s ease,background-color .15s ease; }
+    .profile-card:hover { border-color:var(--accent); background:#fff; }
+    .profile-card strong { display:block; font:16px var(--serif); }
+    .profile-card span { color:var(--muted); font-size:12px; }
     .section-picker { padding:23px 0 34px; }
     .picker-heading { display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin:0 0 13px; }
     .picker-heading h2 { margin:0; font-size:22px; font-weight:400; }
@@ -70,26 +96,63 @@
     footer { border-top:1px solid var(--line); color:var(--muted); padding:25px 0 34px; font:13px system-ui,sans-serif; }
     body:not(.detail-open) footer { display:none; }
     [hidden] { display:none !important; }
-    @media(max-width:1080px) { .nav { flex-wrap:wrap; justify-content:center; padding:10px 0; gap:8px 20px; } .nav-sections { flex-wrap:wrap; justify-content:center; gap:5px 14px; } .hero { min-height:560px; grid-template-columns:1fr minmax(260px,340px); gap:28px; } }
-    @media(max-width:650px) { .wrap { width:min(100% - 32px,1120px); } .nav { min-height:58px; } nav { flex-wrap:wrap; justify-content:center; } .nav-sections { justify-content:center; gap:2px 12px; } .nav-section { font-size:12px; padding:5px 0; } .brand { font-size:13px; } .brand small { font-size:10px; } .monogram { width:34px; height:34px; } .hero { min-height:0; padding:24px 0; grid-template-columns:100px minmax(0,1fr); gap:16px; align-items:start; } .hero-copy { order:1; } .portrait-frame { order:0; padding:5px; } .portrait-frame::after { inset:-5px -6px 5px 6px; } h1 { margin:7px 0; font-size:clamp(29px,8vw,42px); letter-spacing:-.04em; } .eyebrow { font-size:9px; } .eyebrow::before { width:13px; margin-right:5px; } .subtitle { font-size:13px; line-height:1.35; margin:0 0 8px; } .hero-copy>p:not(.subtitle) { margin:7px 0; font-size:12px; line-height:1.45; } .hero .actions { margin-top:10px; gap:7px; } .hero .button { padding:7px 9px; font-size:11px; } .profile-tags { display:none; } .section-picker { padding:16px 0 26px; } .picker-heading { align-items:flex-start; flex-direction:column; gap:2px; } .picker-heading h2 { font-size:19px; } .section-grid { grid-template-columns:repeat(2,minmax(0,1fr)); gap:7px; } .section-button { min-height:48px; padding:9px; gap:8px; font-size:13px; } .section-number { font-size:9px; } .section-arrow { font-size:14px; } section.profile-detail { padding:22px 17px; } section h2 { font-size:29px; } .course-table th,.course-table td { padding:8px 7px; font-size:13px; } .glance { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    .profile-detail .section-label { margin-top:3px; }
+    .button,.nav-section,.menu-toggle { transition:background-color .16s ease,border-color .16s ease,color .16s ease; }
+    .button:hover { border-color:var(--accent); }
+    .button:focus-visible,.nav-section:focus-visible,.brand:focus-visible,.menu-toggle:focus-visible,.profile-card:focus-visible { outline:3px solid rgba(168,97,66,.4); outline-offset:3px; }
+    @media(max-width:1080px) { .nav { flex-wrap:wrap; justify-content:center; padding:10px 0; gap:8px 20px; } .nav-sections { flex-wrap:wrap; justify-content:center; gap:5px 14px; } .hero { min-height:560px; grid-template-columns:1fr minmax(260px,340px); gap:32px; } }
+    @media(max-width:760px) { html { scroll-padding-top:125px; } .nav { min-height:62px; justify-content:space-between; flex-wrap:wrap; padding:10px 0; } .menu-toggle { display:inline-flex; align-items:center; gap:8px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; background:white; color:var(--ink); font:13px var(--sans); cursor:pointer; } .menu-toggle-icon { font-size:17px; line-height:1; } nav { display:none; width:100%; flex-direction:column; align-items:stretch; gap:8px; padding:9px 0 4px; } nav.open { display:flex; } .nav-sections { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:2px 14px; } .nav-section { padding:10px 4px; text-align:left; font-size:14px; } nav .nav-cv { text-align:center; } .hero { min-height:0; grid-template-columns:minmax(0,1fr) minmax(190px,42%); gap:24px; padding:34px 0 40px; } h1 { font-size:clamp(40px,8vw,58px); } .subtitle { font-size:16px; } .interest-grid,.highlight-grid,.profile-grid,.section-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+    @media(max-width:520px) { .wrap { width:min(100% - 32px,1120px); } .brand { font-size:13px; white-space:normal; } .brand small { font-size:10px; } .monogram { flex:0 0 34px; width:34px; height:34px; } .hero { display:flex; flex-direction:column-reverse; gap:22px; padding:28px 0 32px; } .hero-copy { max-width:none; } .portrait-frame { width:min(100%,280px); margin:0 auto; } h1 { margin:8px 0; font-size:clamp(38px,11vw,52px); } .eyebrow { font-size:10px; } .hero-copy>p:not(.subtitle) { font-size:14px; line-height:1.65; } .hero .actions { margin-top:14px; } .profile-tags { display:flex; gap:6px; margin-top:14px; } .profile-tags span { padding:4px 8px; font-size:11px; } .home-section { padding:28px 0 30px; } .home-section h2 { font-size:25px; } .interest-grid,.highlight-grid,.profile-grid,.section-grid { grid-template-columns:1fr; gap:8px; } .interest-card { min-height:0; padding:14px 16px; } .section-picker { padding:20px 0 26px; } .picker-heading { align-items:flex-start; flex-direction:column; gap:2px; } .course-table th,.course-table td { padding:8px 7px; font-size:13px; } .glance { grid-template-columns:repeat(2,minmax(0,1fr)); } section.profile-detail { padding:22px 17px; } section h2 { font-size:28px; } }
+    @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { transition:none !important; } }
   </style>
 </head>
 <body>
-  <header><div class="wrap nav"><button class="brand" id="homeButton" type="button" aria-label="Return to profile home"><span class="monogram">CK</span><span>Chandan Kumar Mohonta<small>B.Sc. in Civil Engineering, BUET</small></span></button><nav aria-label="Profile navigation"><div class="nav-sections"><button class="nav-section" type="button" data-open-section="about" aria-expanded="false" aria-controls="about">About</button><button class="nav-section" type="button" data-open-section="education" aria-expanded="false" aria-controls="education">Education</button><button class="nav-section" type="button" data-open-section="experience" aria-expanded="false" aria-controls="experience">Career</button><button class="nav-section" type="button" data-open-section="projects" aria-expanded="false" aria-controls="projects">Projects</button><button class="nav-section" type="button" data-open-section="courses" aria-expanded="false" aria-controls="courses">Coursework</button><button class="nav-section" type="button" data-open-section="research" aria-expanded="false" aria-controls="research">Publications</button><button class="nav-section" type="button" data-open-section="skills" aria-expanded="false" aria-controls="skills">Skills</button><button class="nav-section" type="button" data-open-section="skills" aria-expanded="false" aria-controls="skills">Activities</button><button class="nav-section" type="button" data-open-section="awards" aria-expanded="false" aria-controls="awards">Awards</button><button class="nav-section" type="button" data-open-section="contact" aria-expanded="false" aria-controls="contact">Contact</button></div><a class="nav-cv" href="Chandan%20Kumar%20Mohonta%20Resume.pdf">Download CV ↓</a></nav></div></header>
+  <header><div class="wrap nav"><button class="brand" id="homeButton" type="button" aria-label="Return to profile home"><span class="monogram">CK</span><span>Chandan Kumar Mohonta<small>Lecturer in Civil Engineering | BUET Graduate</small></span></button><button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="profileNav"><span class="menu-toggle-icon" aria-hidden="true">☰</span><span>Menu</span></button><nav id="profileNav" aria-label="Profile navigation"><div class="nav-sections">
+    <button class="nav-section" type="button" data-open-section="about" aria-expanded="false" aria-controls="about">About</button><button class="nav-section" type="button" data-open-section="research" aria-expanded="false" aria-controls="research">Research</button><button class="nav-section" type="button" data-open-section="publications" aria-expanded="false" aria-controls="publications">Publications</button><button class="nav-section" type="button" data-open-section="experience" aria-expanded="false" aria-controls="experience">Experience</button><button class="nav-section" type="button" data-open-section="courses" aria-expanded="false" aria-controls="courses">Teaching</button><button class="nav-section" type="button" data-open-section="contact" aria-expanded="false" aria-controls="contact">Contact</button>
+  </div><a class="nav-cv" href="Chandan%20Kumar%20Mohonta%20Resume.pdf" download>Download CV ↓</a></nav></div></header>
   <main id="top" class="wrap">
     <div id="landingView">
     <div class="hero">
       <div class="hero-copy intro">
         <div class="eyebrow">Academic profile</div>
         <h1>Chandan Kumar Mohonta</h1>
-        <p class="subtitle">Lecturer, Department of Civil Engineering, AKMU</p>
-        <p>I am a civil engineer and lecturer at Anwer Khan Modern University, with a structural engineering background from Bangladesh University of Engineering and Technology (BUET). I am interested in research that advances safe, efficient, and sustainable concrete structures.</p>
-        <div class="actions"><button class="button primary" type="button" data-open-section="contact" aria-expanded="false" aria-controls="contact">Get in touch</button><a class="button" href="Chandan%20Kumar%20Mohonta%20Resume.pdf">Download CV ↓</a></div>
+        <p class="subtitle">Lecturer in Civil Engineering, Anwer Khan Modern University</p>
+        <p>I am a Civil Engineer and academic with a background in Structural Engineering from Bangladesh University of Engineering and Technology (BUET). My research focuses on structural concrete, fiber-reinforced concrete, and sustainable construction materials, with an interest in developing safer, more durable, and resilient infrastructure.</p>
+        <div class="actions"><button class="button primary" type="button" data-open-section="contact" aria-expanded="false" aria-controls="contact">Get in Touch</button><button class="button" type="button" data-open-section="research" aria-expanded="false" aria-controls="research">View Research</button></div>
         <div class="profile-tags"><span>B.Sc. in Civil Engineering</span><span>Structural Engineering</span><span>BUET</span><span>Dhaka, Bangladesh</span></div>
       </div>
-      <div class="portrait-frame"><img class="portrait" src="portrait.png" alt="Portrait of Chandan Kumar Mohonta"></div>
+      <div class="portrait-frame"><img class="portrait" src="portrait.png" alt="Professional portrait of Chandan Kumar Mohonta" width="960" height="1200" decoding="async" fetchpriority="high"></div>
     </div>
 
+    <section class="home-section" aria-labelledby="interests-heading"><div class="section-label">Research themes</div><h2 id="interests-heading">Research Interests</h2><div class="interest-grid">
+      <article class="interest-card"><h3>Structural Concrete</h3><p>Behavior and design of concrete structures.</p></article>
+      <article class="interest-card"><h3>Fiber-Reinforced Concrete</h3><p>Performance of concrete reinforced with fibers.</p></article>
+      <article class="interest-card"><h3>Reinforced Concrete Structures</h3><p>Structural analysis, design, and response.</p></article>
+      <article class="interest-card"><h3>Sustainable Construction Materials</h3><p>Materials that support resource-conscious construction.</p></article>
+      <article class="interest-card"><h3>Structural Performance &amp; Durability</h3><p>Safe, durable, and resilient infrastructure.</p></article>
+    </div></section>
+
+    <section class="home-section" aria-labelledby="highlights-heading"><div class="section-label">Academic profile</div><h2 id="highlights-heading">Academic Highlights</h2><div class="highlight-grid">
+      <div class="highlight-card"><strong>B.Sc. in Civil Engineering</strong><span>Bangladesh University of Engineering and Technology (BUET)</span></div>
+      <div class="highlight-card"><strong>Structural Engineering</strong><span>Academic specialization</span></div>
+      <div class="highlight-card"><strong>Lecturer, Civil Engineering</strong><span>Anwer Khan Modern University (AKMU)</span></div>
+      <div class="highlight-card"><strong>2026</strong><span>Graduation year</span></div>
+    </div></section>
+
+    <section class="home-section" aria-labelledby="profiles-heading"><div class="section-label">Connect</div><h2 id="profiles-heading">Professional Profiles</h2><div class="profile-grid">
+      <div class="profile-card"><strong>Google Scholar</strong><span>Profile link not provided</span></div>
+      <div class="profile-card"><strong>ORCID</strong><span>Profile link not provided</span></div>
+      <a class="profile-card" href="https://www.linkedin.com/in/chandan-kumar-mohonta-336a10225/" target="_blank" rel="noopener noreferrer"><strong>LinkedIn ↗</strong><span>Professional profile</span></a>
+      <div class="profile-card"><strong>Institutional email</strong><span>Address not provided</span></div>
+      <a class="profile-card" href="mailto:mohontachandan@gmail.com"><strong>Email</strong><span>mohontachandan@gmail.com</span></a>
+    </div></section>
+
+    <section class="section-picker" aria-labelledby="more-heading"><div class="picker-heading"><h2 id="more-heading">Explore the full profile</h2><p>Open a section to see more detail.</p></div><div class="section-grid">
+      <button class="section-button" type="button" data-open-section="education" aria-expanded="false" aria-controls="education"><span class="section-number">01</span>Education<span class="section-arrow" aria-hidden="true">↗</span></button>
+      <button class="section-button" type="button" data-open-section="projects" aria-expanded="false" aria-controls="projects"><span class="section-number">02</span>Projects<span class="section-arrow" aria-hidden="true">↗</span></button>
+      <button class="section-button" type="button" data-open-section="skills" aria-expanded="false" aria-controls="skills"><span class="section-number">03</span>Skills &amp; activities<span class="section-arrow" aria-hidden="true">↗</span></button>
+      <button class="section-button" type="button" data-open-section="awards" aria-expanded="false" aria-controls="awards"><span class="section-number">04</span>Awards<span class="section-arrow" aria-hidden="true">↗</span></button>
+    </div></section>
 
     </div>
 
@@ -98,7 +161,9 @@
 
     <section id="about" class="profile-detail" hidden><div class="section-label">About</div><h2>A short introduction</h2><p>I completed my B.Sc. in Civil Engineering, majoring in Structural Engineering, at BUET in June 2026. My undergraduate research examined how polypropylene, galvanized iron, and steel fibers affect the flexural performance of reinforced concrete beams. My academic interests include reinforced and prestressed concrete, fiber-reinforced concrete, structural analysis and design, and sustainable construction materials.</p><p>I currently teach in the Department of Civil Engineering at Anwer Khan Modern University. I welcome opportunities for graduate study and research collaboration in structural and concrete engineering.</p><h3>At a glance</h3><dl class="glance"><div><dt>Degree</dt><dd>B.Sc. Engineering</dd></div><div><dt>Field</dt><dd>Civil · Structural</dd></div><div><dt>University</dt><dd>BUET</dd></div><div><dt>Location</dt><dd>Dhaka, Bangladesh</dd></div><div><dt>CGPA</dt><dd>3.57 / 4.00</dd></div><div><dt>Graduated</dt><dd>June 2026</dd></div></dl></section>
 
-    <section id="research" class="profile-detail" hidden><div class="section-label">Research</div><h2>Publications &amp; research</h2><p class="tagline">Reinforced concrete · Prestressed concrete · Fiber reinforced concrete · Structural analysis and design · Concrete technology · Sustainable construction materials · Waste-to-resource engineering</p>
+    <section id="research" class="profile-detail" hidden><div class="section-label">Research</div><h2>Research interests</h2><p class="tagline">Structural concrete · Fiber-reinforced concrete · Reinforced concrete structures · Sustainable construction materials · Structural performance and durability</p><h3>Undergraduate thesis</h3><div class="item"><strong>Flexural Performance of Reinforced Concrete Beams Incorporating Polypropylene, Galvanized Iron and Steel Fiber</strong><p>Experimentally investigated the effects of fiber type and dosage on reinforced concrete beam behavior. The work included specimen preparation and testing, measuring compressive strength, splitting tensile strength, modulus of elasticity, and flexural properties.</p></div></section>
+
+    <section id="publications" class="profile-detail" hidden><div class="section-label">Publications</div><h2>Publications &amp; research</h2><p class="tagline">Reinforced concrete · Prestressed concrete · Fiber reinforced concrete · Structural analysis and design · Concrete technology · Sustainable construction materials · Waste-to-resource engineering</p>
       <h3>Undergraduate thesis</h3>
       <div class="item"><strong>Flexural Performance of Reinforced Concrete Beams Incorporating Polypropylene, Galvanized Iron and Steel Fiber</strong><span class="meta">Supervisor: Dr. S. M. Faisal Mahmood, Associate Professor, Department of Civil Engineering, BUET</span>
         <ul><li>Experimentally investigated the effects of fiber type and dosage on reinforced concrete beam behavior.</li><li>Prepared and tested specimens with polypropylene, galvanized iron, steel, and selected hybrid fiber combinations.</li><li>Measured compressive strength, splitting tensile strength, modulus of elasticity, and flexural properties.</li><li>Observed that galvanized iron fiber produced results comparable to steel fiber in the tested mixes; higher fiber content reduced workability.</li></ul>
@@ -154,11 +219,25 @@
   document.getElementById('year').textContent = new Date().getFullYear();
   const landingView = document.getElementById('landingView');
   const contentView = document.getElementById('contentView');
+  const profileNav = document.getElementById('profileNav');
+  const menuToggle = document.getElementById('menuToggle');
   const detailPanels = [...document.querySelectorAll('.profile-detail')];
   const sectionTriggers = [...document.querySelectorAll('[data-open-section]')];
   let activeSectionId = null;
 
+  function closeMenu() {
+    profileNav.classList.remove('open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+  }
+
+  menuToggle.addEventListener('click', () => {
+    const open = menuToggle.getAttribute('aria-expanded') !== 'true';
+    menuToggle.setAttribute('aria-expanded', String(open));
+    profileNav.classList.toggle('open', open);
+  });
+
   function showProfileHome() {
+    closeMenu();
     document.body.classList.remove('detail-open');
     detailPanels.forEach(panel => { panel.hidden = true; });
     sectionTriggers.forEach(trigger => trigger.setAttribute('aria-expanded', 'false'));
@@ -170,6 +249,7 @@
   }
 
   function showSection(sectionId) {
+    closeMenu();
     const panel = document.getElementById(sectionId);
     if (!panel) return;
     if (activeSectionId === sectionId && !contentView.hidden) {
